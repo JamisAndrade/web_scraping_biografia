@@ -40,7 +40,7 @@ def obter_biografia_politico(nome_politico):
             if html:
                 conteudo_biografia = extrair_conteudo(html)
                 if conteudo_biografia:
-                    return jsonify({"biografia": conteudo_biografia})
+                    return jsonify({"biografia": conteudo_biografia, "url": url})
                 else:
                     return jsonify({"mensagem": "Biografia não encontrada."}), 404
             else:
